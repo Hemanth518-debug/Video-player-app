@@ -1,10 +1,10 @@
 name: Build2
 
 on:
-  push:
-    branches:
-      - flutter-*-webos
-  pull_request:
+ push:
+    branches: [ "main" ]
+ pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
