@@ -44,6 +44,8 @@ jobs:
       - name: gclient sync
         run: |
           gclient config --name=src/flutter --unmanaged https://github.com/flutter-webOS/engine
+          gclient setdep --var=download_android_deps=False --deps-file=src/flutter/DEPS
+          PYTHONPATH="$PWD/depot_tools" python3 src/flutter/ci/webos/gclient-shallow-sync.py src/flutter/DEPS
           gclient sync -v --no-history --shallow
 
       - name: verify formatting
