@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: 
-      - self-hosted
-      - ubuntu-latest
+    runs-on: ubuntu-latest
     container:
       image: sachinlg1282/flutter_ubuntu18.04:latest
 
